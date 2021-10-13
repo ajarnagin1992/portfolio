@@ -29,7 +29,7 @@ jobs:
       - run: touch out/.nojekyll
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action
+        uses: JamesIves/github-pages-deploy-action@main
         with:
           BRANCH: gh-pages 
           FOLDER: out
