@@ -1,18 +1,21 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title></title>
         <meta name="" content="" />
         <link rel="" href="" />
       </Head>
 
-      <main className={styles.main}></main>
+      <main>
+        <div>
+          <p>Testing</p>
+        </div>
+      </main>
 
-      <footer className={styles.footer}></footer>
+      <footer></footer>
     </div>
   );
 }

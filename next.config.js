@@ -1,10 +1,11 @@
 // next.config.js
 const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
+const withMDX = require("@next/mdx")();
 
 const nextConfig = {
-  basePath: "portfolio",
-  assetPrefix: "portfolio",
+  basePath: "/portfolio",
+  assetPrefix: "/portfolio",
 };
 
 module.exports = withPlugins(
@@ -15,8 +16,12 @@ module.exports = withPlugins(
         /* config for next-optimized-images */
       },
     ],
-
-    // your other plugins here
+    [
+      withMDX,
+      {
+        /* config for withMDX */
+      },
+    ],
   ],
   nextConfig
 );
