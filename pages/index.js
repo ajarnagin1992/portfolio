@@ -1,21 +1,10 @@
-import Head from "next/head";
+import { Meta } from "../components/Meta";
 
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title></title>
-        <meta name="" content="" />
-        <link rel="" href="" />
-      </Head>
-
-      <main>
-        <div>
-          <p>Testing</p>
-        </div>
-      </main>
-
-      <footer></footer>
+      <Meta />
+      <p>Testing</p>
     </div>
   );
 }
