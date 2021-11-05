@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <nav className="bg-gray-50 max-w-full px-10 py-2">
       <div className="flex justify-between items-center">
-        <div classname="flex">
+        <div className="flex">
           <Link href="/">
             <a>
               <p>Andrew Jarnagin</p>
