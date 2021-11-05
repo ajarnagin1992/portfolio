@@ -1,3 +1,5 @@
+import { addBasePath } from "next/dist/shared/lib/router/router";
+
 export const HeroSection = () => {
   return (
     <div className="flex flex-row justify-center items-start overflow-hidden">
@@ -13,7 +15,7 @@ export const HeroSection = () => {
         </p>
       </div>
       <div className="hidden lg:block relative w-full md:w-1/2 object-scale-down p-20">
-        <img src="/portfolio/placeholder-hero.jpg"></img>
+        <img src={addBasePath("/placeholder-hero.jpg")}></img>
       </div>
     </div>
   );

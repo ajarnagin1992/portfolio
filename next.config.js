@@ -1,11 +1,12 @@
 // next.config.js
+const ghPages = process.env.DEPLOY_TARGET === "gh-pages";
 const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
 const withMDX = require("@next/mdx")();
 
 const nextConfig = {
-  basePath: "/portfolio",
-  assetPrefix: "/portfolio",
+  basePath: ghPages ? "/blog/" : "",
+  assetPrefix: ghPages ? "/blog/" : "",
 };
 
 module.exports = withPlugins(
@@ -16,12 +17,12 @@ module.exports = withPlugins(
         /* config for next-optimized-images */
       },
     ],
-    [
-      withMDX,
-      {
-        /* config for withMDX */
-      },
-    ],
+    // [
+    //   withMDX,
+    //   {
+    //     /* config for withMDX */
+    //   },
+    // ],
   ],
   nextConfig
 );
