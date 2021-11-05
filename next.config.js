@@ -5,8 +5,8 @@ const optimizedImages = require("next-optimized-images");
 const withMDX = require("@next/mdx")();
 
 const nextConfig = {
-  basePath: ghPages ? "/blog/" : "",
-  assetPrefix: ghPages ? "/blog/" : "",
+  basePath: ghPages ? "/portfolio/" : "",
+  assetPrefix: ghPages ? "/portfolio/" : "",
 };
 
 module.exports = withPlugins(
