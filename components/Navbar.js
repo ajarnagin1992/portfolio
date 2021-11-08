@@ -5,10 +5,10 @@ import { useRouter } from "next/router";
 export const Navbar = () => {
   const router = useRouter();
   return (
-    <nav className="bg-blue-300 max-w-full md:px-40 px-4 md:py-4 py-2">
+    <nav className="bg-blue-300 max-w-full md:px-10 px-4 md:py-4 py-2">
       <div className="flex flex-row justify-between items-center">
         <div className="flex md:flex-row space-x-12 items-center">
-          <div className="flex flex-row space-x-4 items-center">
+          <div className="flex flex-row space-x-4">
             <Link href="/">
               <a>
                 <img
