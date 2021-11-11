@@ -5,12 +5,12 @@ import { useRouter } from "next/router";
 export const Navbar = () => {
   const router = useRouter();
   return (
-    <nav className="bg-blue-300 max-w-full md:px-10 px-4 md:py-4 py-2">
+    <nav className="bg-black text-white max-w-full md:px-10 px-4 md:py-4 py-2">
       <div className="flex flex-row justify-between items-center">
         <div className="flex md:flex-row space-x-12 items-center">
           <div className="flex flex-row space-x-4">
             <Link href="/">
-              <a>
+              <a className="w-12 h-12">
                 <img
                   src={addBasePath("/avatar.jpg")}
                   className="rounded-full object-contain h-12"
@@ -24,13 +24,13 @@ export const Navbar = () => {
               </a>
             </Link>
           </div>
-          <div className="hidden md:block space-x-3">
+          <div className="hidden md:block space-x-5">
             <Link href="/about">
               <a>About</a>
             </Link>
-            <Link href="/projects">
+            {/* <Link href="/projects">
               <a>Projects</a>
-            </Link>
+            </Link> */}
             <Link href="/contact">
               <a>Contact</a>
             </Link>
@@ -39,7 +39,7 @@ export const Navbar = () => {
         <div className="flex flex-row space-x-4">
           <a
             href={"https://www.linkedin.com/in/ajarnagin1992/"}
-            className="text-base font-normal text-gray-600 dark:text-gray-300"
+            className="text-base font-normal text-white dark:text-gray-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ export const Navbar = () => {
           </a>
           <a
             href={"https://github.com/ajarnagin1992"}
-            className="text-base font-normal text-gray-600 dark:text-gray-300"
+            className="text-base font-normal text-white dark:text-gray-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -73,9 +73,9 @@ export const Navbar = () => {
         <Link href="/about">
           <a>About</a>
         </Link>
-        <Link href="/projects">
+        {/* <Link href="/projects">
           <a>Projects</a>
-        </Link>
+        </Link> */}
         <Link href="/contact">
           <a>Contact</a>
         </Link>

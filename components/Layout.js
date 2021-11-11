@@ -3,7 +3,7 @@ import { Navbar } from "./Navbar";
 
 export const Layout = ({ children, ...metadata }) => {
   return (
-    <div className="">
+    <div className="bg-gray-200">
       <Navbar />
       <main>{children}</main>
       <Footer />
