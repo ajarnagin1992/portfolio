@@ -10,7 +10,7 @@ function ContactForm() {
         <div>
           <h1 className="font-semibold text-xl">Reach out, lets chat!</h1>
           <h2 classname="font-extralight">
-            Fill out the contact form and I'll get back to you ASAP!
+            {"Fill out the contact form and I'll get back to you ASAP!"}
           </h2>
 
           <div className="flex flex-col p-10 space-y-3">
