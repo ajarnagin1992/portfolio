@@ -9,8 +9,8 @@ function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl m-auto rounded-b-lg bg-blue-900 text-white p-20">
         <div>
           <h1 className="font-semibold text-xl">Reach out, lets chat!</h1>
-          <h2 classname="font-extralight">
-            Fill out the contact form and I'll get back to you ASAP!
+          <h2 className="font-extralight">
+            {"Fill out the contact form and I'll get back to you ASAP!"}
           </h2>
 
           <div className="inline-flex flex-col py-6 px-10 space-y-3">
@@ -63,7 +63,7 @@ function ContactForm() {
           className="flex flex-col max-w-6xl space-y-5 bg-white text-black p-12 rounded-xl"
           action="https://formspree.io/f/xleayqwr"
           method="POST"
-          enctype="multipart/form-data"
+          encType="multipart/form-data"
         >
           <label htmlFor="_replyto">Your email:</label>
           <input
