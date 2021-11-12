@@ -4,7 +4,7 @@ import Link from "next/link";
 export const HeroSection = () => {
   return (
     <div className="flex flex-row justify-center items-center overflow-hidden bg-black text-white">
-      <div className="w-full md:w-1/2 text-center md:text-left p-20 space-y-10 pl-40">
+      <div className="w-full md:w-1/2 text-center md:text-left p-20 space-y-10 md:pl-40">
         <p className=" text-7xl">{"Hi, I'm Andrew!"}</p>
         <p className="text-3xl">
           {"Full Stack Web-Developer / Software Engineer"}
