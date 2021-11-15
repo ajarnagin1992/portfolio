@@ -19,7 +19,7 @@ function SkillSection() {
   return (
     <div className="grid grid-cols-4 grid-flow-row">
       {skills.map((skill, index) => {
-        return <SkillCard key={index} skillName={skill} />;
+        return <SkillCard key={index} icon="" skillName={skill} />;
       })}
     </div>
   );
