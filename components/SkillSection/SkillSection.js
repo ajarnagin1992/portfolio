@@ -18,8 +18,8 @@ const skills = [
 function SkillSection() {
   return (
     <div className="grid grid-cols-4 grid-flow-row">
-      {skills.map((skill, index) => {
-        return <SkillCard key={index} icon="" skillName={skill} />;
+      {skills.map((skill) => {
+        return <SkillCard key={skill} icon="" skillName={skill} />;
       })}
     </div>
   );
