@@ -18,9 +18,9 @@ const skills = [
 function SkillSection() {
   return (
     <div className="grid grid-cols-4 grid-flow-row">
-      {skills.map((value, key) => {
-        const icon = `public/icons/${value}.svg`;
-        return <SkillCard icon={icon} skillName={value} />;
+      {skills.map((value) => {
+        const myicon = `public/icons/${value}.svg`;
+        return <SkillCard icon={myicon} skillName={value} />;
       })}
     </div>
   );
