@@ -1,10 +1,5 @@
 const deployEnv = process.env.deploy_env === "production";
 
-const nextConfig = {
-  basePath: deployEnv ? "/portfolio" : "",
-  assetPrefix: deployEnv ? "/portfolio" : "",
-};
-
 module.exports = {
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Important: return the modified config
@@ -14,5 +9,6 @@ module.exports = {
     });
     return config;
   },
-  nextConfig,
+  basePath: deployEnv ? "/portfolio" : "",
+  assetPrefix: deployEnv ? "/portfolio" : "",
 };
