@@ -37,10 +37,14 @@ export const skills = [
   },
   {
     title: "MySQL",
-    key: "mySQL",
+    key: "mysql",
   },
   {
     title: "Node",
     key: "node",
+  },
+  {
+    title: "NextJS",
+    key: "nextjs",
   },
 ];
