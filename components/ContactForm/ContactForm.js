@@ -1,10 +1,11 @@
 import React from "react";
+import Icon from "public/icons";
 
 function ContactForm() {
   return (
     <div className="pt-10 md:pt-28">
       <div className="max-w-6xl m-auto text-5xl rounded-t-lg bg-blue-700 text-white p-8 pl-14">
-        Contact Me!
+        Contact Me
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl m-auto rounded-b-lg bg-blue-900 text-white p-20">
         <div>
@@ -60,7 +61,7 @@ function ContactForm() {
           </div>
         </div>
         <form
-          className="flex flex-col max-w-6xl space-y-5 bg-white text-black p-12 rounded-xl"
+          className="flex flex-col max-w-6xl bg-white text-black p-12 rounded-xl"
           action="https://formspree.io/f/xleayqwr"
           method="POST"
           encType="multipart/form-data"
@@ -69,12 +70,12 @@ function ContactForm() {
           <input
             type="email"
             name="_replyto"
-            className="rounded border p-2 focus:border-transparent"
+            className="rounded border p-2 focus:border-transparent mb-12"
           />
           <label htmlFor="message">Your message:</label>
           <textarea
             name="message"
-            className="rounded border p-2 focus:border-transparent"
+            className="rounded border p-2 focus:border-transparent mb-12"
           ></textarea>
           <button type="submit" className="rounded p-2 bg-blue-600 text-white">
             Send
