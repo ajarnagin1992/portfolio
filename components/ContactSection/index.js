@@ -3,7 +3,7 @@ import { PhoneIcon, MailIcon, LocationIcon } from "public/icons";
 
 function ContactTitle(props) {
   return (
-    <div className="max-w-6xl m-auto text-5xl rounded-t-lg bg-blue-700 text-white p-8 pl-14">
+    <div className=" text-5xl rounded-t-lg bg-blue-700 text-white p-8 pl-14">
       Contact Me
     </div>
   );
@@ -11,7 +11,7 @@ function ContactTitle(props) {
 
 function ContactBody(props) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl m-auto rounded-b-lg bg-blue-900 text-white p-20">
+    <div className="grid grid-cols-1 md:grid-cols-2 rounded-b-lg bg-blue-900 text-white p-20">
       {props.children}
     </div>
   );
@@ -63,7 +63,7 @@ function ContactForm() {
 
 function ContactSection() {
   return (
-    <div className="pt-10 md:pt-28">
+    <div className="pt-10 md:pt-28 max-w-7xl mx-auto">
       <ContactTitle />
       <ContactBody>
         <div>

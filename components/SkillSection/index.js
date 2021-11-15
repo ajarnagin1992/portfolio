@@ -1,6 +1,14 @@
 import React from "react";
-import SkillCard from "./SkillCard";
 import { skills } from "./skills";
+
+function SkillCard({ key, icon, skillName }) {
+  return (
+    <div key={key} className="p-4 flex flex-col">
+      <div>{icon}</div>
+      <div>{skillName}</div>
+    </div>
+  );
+}
 
 function SkillSection() {
   return (

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Meta } from "../components/Meta/Meta";
+import { Meta } from "../components/Meta";
 
 export default class projects extends Component {
   render() {

@@ -1,5 +1,5 @@
-import { HeroSection } from "../components/Hero/HeroSection";
-import { Meta } from "../components/Meta/Meta";
+import { HeroSection } from "../components/Hero";
+import { Meta } from "../components/Meta";
 
 export default function Home() {
   return (
