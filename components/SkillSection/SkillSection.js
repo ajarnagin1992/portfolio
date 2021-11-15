@@ -1,5 +1,5 @@
 import React from "react";
-import SkillCard from "components/SkillCard";
+import SkillCard from "./SkillCard";
 
 const skills = [
   "Javascript",
@@ -19,7 +19,7 @@ function SkillSection() {
   return (
     <div className="grid grid-cols-4 grid-flow-row">
       {skills.map((value) => {
-        const icon = `../icons/${value}`;
+        const icon = `public/icons/${value}.svg`;
         return <SkillCard icon={icon} skillName={value} />;
       })}
     </div>

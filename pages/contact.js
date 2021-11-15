@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ContactForm from "components/ContactForm/ContactForm";
+import ContactSection from "components/ContactSection";
 import { Meta } from "components/Meta/Meta";
 
 export default class contact extends Component {
@@ -7,7 +7,7 @@ export default class contact extends Component {
     return (
       <div>
         <Meta />
-        <ContactForm />
+        <ContactSection />
       </div>
     );
   }

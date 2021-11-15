@@ -10,16 +10,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^11.1.2",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "next": "11.1.2",
-    "next-compose-plugins": "^2.2.1",
-    "next-optimized-images": "^2.6.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "styled-components": "^5.3.1"
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@svgr/webpack": "^5.5.0",
