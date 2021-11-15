@@ -1,10 +1,10 @@
 import React from "react";
 
-function SkillCard({ icon, skillName }) {
+function SkillCard({ key, icon, skillName }) {
   return (
-    <div className="p-4 flex flex-col">
-      <div>{icon}</div>
-      <div>{skillName}</div>
+    <div key={key} className="p-4 flex flex-col">
+      <div key={key}>{icon}</div>
+      <div key={key}>{skillName}</div>
     </div>
   );
 }
