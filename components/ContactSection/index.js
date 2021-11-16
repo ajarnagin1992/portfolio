@@ -1,6 +1,28 @@
 import React from "react";
 import { PhoneIcon, MailIcon, LocationIcon } from "public/icons";
 
+function ContactSection() {
+  return (
+    <div className="pt-10 md:pt-28 max-w-6xl mx-auto">
+      <ContactTitle />
+      <ContactBody>
+        <div>
+          <h1 className="font-semibold text-xl">{"Reach out, lets chat!"}</h1>
+          <h2 className="font-extralight">
+            {"Fill out the contact form and I'll get back to you ASAP!"}
+          </h2>
+          <InfoSection>
+            <InfoText icon={<PhoneIcon />} info="(478)-331-1569" />
+            <InfoText icon={<MailIcon />} info="ajarnagin1992@gmail.com" />
+            <InfoText icon={<LocationIcon />} info="Augusta, GA" />
+          </InfoSection>
+        </div>
+        <ContactForm />
+      </ContactBody>
+    </div>
+  );
+}
+
 function ContactTitle(props) {
   return (
     <div className=" text-5xl rounded-t-lg bg-blue-700 text-white p-8 pl-14">
@@ -26,7 +48,7 @@ function InfoSection(props) {
   );
 }
 
-function InfoBox(props) {
+function InfoText(props) {
   return (
     <div className="flex flex-row space-x-3 items-center p-2 border border-transparent hover:border-blue-200">
       <div>{props.icon}</div>
@@ -38,7 +60,7 @@ function InfoBox(props) {
 function ContactForm() {
   return (
     <form
-      className="flex flex-col max-w-6xl bg-white text-black p-12 rounded-xl"
+      className="flex flex-col bg-white text-black p-12 rounded-xl"
       action="https://formspree.io/f/xleayqwr"
       method="POST"
       encType="multipart/form-data"
@@ -58,28 +80,6 @@ function ContactForm() {
         Send
       </button>
     </form>
-  );
-}
-
-function ContactSection() {
-  return (
-    <div className="pt-10 md:pt-28 max-w-7xl mx-auto">
-      <ContactTitle />
-      <ContactBody>
-        <div>
-          <h1 className="font-semibold text-xl">{"Reach out, lets chat!"}</h1>
-          <h2 className="font-extralight">
-            {"Fill out the contact form and I'll get back to you ASAP!"}
-          </h2>
-          <InfoSection>
-            <InfoBox icon={<PhoneIcon />} info="(478)-331-1569" />
-            <InfoBox icon={<MailIcon />} info="ajarnagin1992@gmail.com" />
-            <InfoBox icon={<LocationIcon />} info="Augusta, GA" />
-          </InfoSection>
-        </div>
-        <ContactForm />
-      </ContactBody>
-    </div>
   );
 }
 

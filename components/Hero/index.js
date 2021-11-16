@@ -11,14 +11,17 @@ export const HeroSection = () => {
         </p>
         <div>
           <Link href="https://docs.google.com/document/d/19zKQZN3cyHFnqbUkQ-sSKbO9zoXrofFu/edit?usp=sharing&ouid=105801538895794322757&rtpof=true&sd=true">
-            <a className="rounded p-2 bg-blue-300 hover:bg-blue-600">
-              Download my CV!
+            <a className="rounded p-2 bg-blue-600 hover:bg-blue-300">
+              {"Download my CV!"}
             </a>
           </Link>
         </div>
       </div>
       <div className="hidden lg:block relative w-full md:w-1/2 p-20 pr-40">
-        <img src={addBasePath("/placeholder-hero.jpg")}></img>
+        <img
+          src={addBasePath("/placeholder-hero.jpg")}
+          alt="Placeholder Image"
+        ></img>
       </div>
     </div>
   );
