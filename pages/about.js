@@ -7,9 +7,9 @@ export default class about extends Component {
     return (
       <div>
         <Meta />
-        <div className="flex flex-col max-w-3xl m-auto pt-10">
-          <h1 className="text-5xl">About me</h1>
-          <h2 className="text-lg">
+        <div className="flex flex-col max-w-3xl m-auto">
+          <h1 className="text-5xl p-10">About me</h1>
+          <h2 className="text-lg py-2">
             {"Hi, I'm Andrew, I'm a full-stack web developer looking for work!"}
           </h2>
           <p>

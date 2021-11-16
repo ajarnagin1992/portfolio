@@ -83,4 +83,9 @@ export const skills = [
     Component: SiNextdotjs,
     Description: "",
   },
-];
+].sort(function (a, b) {
+  a = a.title.toLowerCase();
+  b = b.title.toLowerCase();
+
+  return a < b ? -1 : a > b ? 1 : 0;
+});

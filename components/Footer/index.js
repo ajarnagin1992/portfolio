@@ -10,6 +10,10 @@ export const Footer = () => {
           Built with{" "}
           <a href="https://nextjs.org/" className="text-blue-400">
             Next.js
+          </a>{" "}
+          and{" "}
+          <a href="https://tailwindcss.com/" className="text-blue-400">
+            Tailwindcss
           </a>
         </p>
       </div>
