@@ -12,7 +12,7 @@ export const HeroSection = () => {
         <div>
           <Link href="https://docs.google.com/document/d/19zKQZN3cyHFnqbUkQ-sSKbO9zoXrofFu/edit?usp=sharing&ouid=105801538895794322757&rtpof=true&sd=true">
             <a className="rounded p-2 bg-blue-600 hover:bg-blue-300">
-              {"Download my CV!"}
+              {"Check out my CV!"}
             </a>
           </Link>
         </div>
