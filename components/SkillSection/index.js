@@ -5,7 +5,7 @@ function SkillSection() {
   return (
     <div className="flex flex-col max-w-3xl m-auto pt-28">
       <h1 className="text-5xl">Skills</h1>
-      <div className="grid grid-flow-row grid-cols-4">
+      <div className="grid grid-flow-row grid-cols-3 md:grid-cols-4">
         {skills.map((skill) => {
           return (
             <SkillCard
