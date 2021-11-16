@@ -7,11 +7,11 @@ export const Footer = () => {
           {"© 2021 Andrew Jarnagin. All rights reserved."}
         </p>
         <p className=" font-extralight">
-          Built with{" "}
+          {"Built with "}
           <a href="https://nextjs.org/" className="text-blue-400">
             Next.js
-          </a>{" "}
-          and{" "}
+          </a>
+          {" and "}
           <a href="https://tailwindcss.com/" className="text-blue-400">
             Tailwindcss
           </a>

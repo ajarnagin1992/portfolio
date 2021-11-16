@@ -7,17 +7,29 @@ export const Navbar = () => {
   const router = useRouter();
   return (
     <NavContainer>
-      <div className="flex flex-row space-x-12 items-center">
-        <AvatarSection />
-        <LinkSection className="hidden md:block space-x-5" />
+      <div>
+        <div className="flex flex-row justify-between items-center">
+          <div className="flex flex-row items-center space-x-8">
+            <AvatarSection />
+            <LinkSection className="space-x-5 hidden md:block" />
+          </div>
+          <SocialLinks />
+        </div>
+        <LinkSection className="space-x-3 mt-4 block md:hidden" />
       </div>
-      <SocialContainer />
-      <LinkSection className="space-x-3 block md:hidden mt-4" />
     </NavContainer>
   );
 };
 
-function SocialContainer() {
+function MobileNav(props) {
+  return;
+}
+
+function Nav(props) {
+  return;
+}
+
+function SocialLinks() {
   return (
     <div className="flex flex-row space-x-4">
       <a
@@ -38,7 +50,11 @@ function SocialContainer() {
 
 function NavContainer(props) {
   return (
-    <nav className="bg-black text-white max-w-full md:px-10 px-4 md:py-4 py-2 justify-between items-center flex flex-col md:flex-row">
+    <nav
+      className="
+      bg-black text-white max-w-full px-4 py-2 
+      md:px-10 md:py-4"
+    >
       {props.children}
     </nav>
   );
