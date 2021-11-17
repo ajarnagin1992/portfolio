@@ -19,7 +19,7 @@ function SkillSection() {
 
 function SkillSectionContainer(props) {
   return (
-    <div className="flex flex-col max-w-3xl m-auto pt-28">
+    <div className="flex flex-col pt-28">
       <h1 className="text-5xl p-10">Skills</h1>
       <div className="grid grid-flow-row grid-cols-3 md:grid-cols-4">
         {props.children}
@@ -28,9 +28,9 @@ function SkillSectionContainer(props) {
   );
 }
 
-function SkillCard({ key, icon, title }) {
+function SkillCard({ icon, title }) {
   return (
-    <div key={key} className="p-4 flex flex-row items-center space-x-4">
+    <div className="p-4 flex flex-row items-center space-x-4">
       <div>{icon}</div>
       <div>{title}</div>
     </div>
