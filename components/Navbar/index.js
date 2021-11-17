@@ -4,18 +4,17 @@ import { useRouter } from "next/router";
 import { FaLinkedin, FaGithub, FaGit } from "react-icons/fa";
 
 export const Navbar = () => {
-  const router = useRouter();
   return (
     <NavContainer>
       <div>
-        <div className="flex flex-row justify-between items-center">
+        <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row items-center space-x-8">
             <AvatarSection />
-            <LinkSection className="space-x-5 hidden md:block" />
+            <LinkSection className="hidden md:flex" />
           </div>
           <SocialLinks />
         </div>
-        <LinkSection className="space-x-3 mt-4 block md:hidden" />
+        <LinkSection className="mt-4 flex md:hidden" />
       </div>
     </NavContainer>
   );
@@ -29,20 +28,24 @@ function Nav(props) {
   return;
 }
 
-function SocialLinks() {
+function SocialLinks(props) {
   return (
     <div className="flex flex-row space-x-4">
       <a
         href={"https://www.linkedin.com/in/ajarnagin1992/"}
+        target="_blank"
+        rel="noreferrer"
         className="text-base font-normal text-white dark:text-gray-300"
       >
-        <FaLinkedin className="h-5 w-5" />
+        <FaLinkedin className="h-8 w-8" />
       </a>
       <a
         href={"https://github.com/ajarnagin1992"}
+        target="_blank"
+        rel="noreferrer"
         className="text-base font-normal text-white dark:text-gray-300"
       >
-        <FaGithub className="h-5 w-5" />
+        <FaGithub className="h-8 w-8" />
       </a>
     </div>
   );
@@ -51,9 +54,9 @@ function SocialLinks() {
 function NavContainer(props) {
   return (
     <nav
-      className="
+      className={`
       bg-black text-white max-w-full px-4 py-2 
-      md:px-10 md:py-4"
+      md:px-10 md:py-4 ${props.className}`}
     >
       {props.children}
     </nav>
@@ -61,16 +64,31 @@ function NavContainer(props) {
 }
 
 function LinkSection(props) {
+  const router = useRouter();
+  const hoverstyle = "bg-blue-600 rounded";
+
   return (
     <div className={props.className}>
       <Link href="/about">
-        <a>About</a>
+        <a
+          className={`text-base p-3 ${
+            router.asPath === "/about" ? hoverstyle : ""
+          }`}
+        >
+          About
+        </a>
       </Link>
       {/* <Link href="/projects">
               <a>Projects</a>
             </Link> */}
       <Link href="/contact">
-        <a>Contact</a>
+        <a
+          className={`text-base p-3 ${
+            router.asPath === "/contact" ? hoverstyle : ""
+          }`}
+        >
+          Contact
+        </a>
       </Link>
     </div>
   );
@@ -80,7 +98,7 @@ function AvatarSection(props) {
   return (
     <div className="flex flex-row space-x-4">
       <Link href="/">
-        <a className="w-12 h-12">
+        <a className="h-12 w-12">
           <img
             src={addBasePath("/avatar.jpg")}
             alt="AvatarIcon"
@@ -89,7 +107,7 @@ function AvatarSection(props) {
         </a>
       </Link>
       <Link href="/">
-        <a className="">
+        <a>
           <p className="font-semibold">Andrew Jarnagin</p>
           <p className="font-light">Software Developer</p>
         </a>
