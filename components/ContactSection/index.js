@@ -26,7 +26,10 @@ function ContactSection() {
 
 function ContactTitle(props) {
   return (
-    <div className="block text-5xl rounded-t-lg bg-blue-700 text-white p-8 pl-14 overflow-visible">
+    <div
+      className="block text-5xl rounded-t-lg bg-blue-700 text-white p-5 pl-7 
+      md:p-8 md:pl-14"
+    >
       Contact Me
     </div>
   );

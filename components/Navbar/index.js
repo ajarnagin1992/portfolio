@@ -37,7 +37,7 @@ function SocialLinks(props) {
         rel="noreferrer"
         className="text-base font-normal text-white dark:text-gray-300"
       >
-        <FaLinkedin className="h-8 w-8" />
+        <FaLinkedin className="h-6 w-6 md:h-8 md:w-8" />
       </a>
       <a
         href={"https://github.com/ajarnagin1992"}
@@ -45,7 +45,7 @@ function SocialLinks(props) {
         rel="noreferrer"
         className="text-base font-normal text-white dark:text-gray-300"
       >
-        <FaGithub className="h-8 w-8" />
+        <FaGithub className="h-6 w-6 md:h-8 md:w-8" />
       </a>
     </div>
   );
