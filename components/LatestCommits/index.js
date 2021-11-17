@@ -13,7 +13,7 @@ function LatestCommits() {
 
 function Profile() {
   const { data, error } = useSWR(
-    "https://api.github.com/users/ajarnagin1992/repos?sort=created&per_page=6",
+    "https://api.github.com/users/ajarnagin1992/repos?sort=pushed&per_page=6",
     fetcher
   );
 
@@ -23,7 +23,13 @@ function Profile() {
     return (
       <div className="grid grid-cols-2 md:grid-cols-3">
         {data.map((repo) => {
-          return <RepoCard key={repo.id} name={repo.name}></RepoCard>;
+          return (
+            <RepoCard
+              key={repo.id}
+              name={repo.name}
+              desc={repo.description}
+            ></RepoCard>
+          );
         })}
       </div>
     );
@@ -31,7 +37,12 @@ function Profile() {
 }
 
 function RepoCard(props) {
-  return <div className="flex flex-col">{props.name}</div>;
+  return (
+    <div className="flex flex-col p-3">
+      <h1>{props.name}</h1>
+      <p>{props.desc}</p>
+    </div>
+  );
 }
 
 export default LatestCommits;
