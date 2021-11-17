@@ -45,6 +45,7 @@ function Profile() {
               name={repo.name}
               desc={repo.description}
               url={repo.html_url}
+              topics={repo.topics}
             ></RepoCard>
           );
         })}
@@ -66,9 +67,9 @@ function RepoCard(props) {
       </div>
     );
   return (
-    <div className="flex flex-col p-3 border border-black bg-gray-100 m-1 rounded space-y-1">
+    <div className="flex flex-col justify-between p-3 border border-black bg-gray-100 m-1 rounded space-y-1">
       <div className="flex flex-row justify-between items-baseline">
-        <h1 className="text-lg font-semibold underline">{props.name}</h1>
+        <h1 className="text-lg font-semibold underline w-2/3">{props.name}</h1>
         <a
           href={props.url}
           target="_blank"
@@ -80,6 +81,18 @@ function RepoCard(props) {
         </a>
       </div>
       <p>{props.desc}</p>
+      <div className="flex flex-row space-x-3">
+        {props.topics.map((topic) => {
+          return (
+            <p
+              key={topic}
+              className="text-xs font-extralight p-1 bg-blue-200 rounded-xl"
+            >
+              {topic}
+            </p>
+          );
+        })}
+      </div>
     </div>
   );
 }
