@@ -12,5 +12,7 @@ export const Layout = ({ children }) => {
 };
 
 export function PageMargins({ children }) {
-  return <div className="max-w-6xl mx-auto bg-white p-10">{children}</div>;
+  return (
+    <div className="max-w-6xl mx-auto bg-white p-4 md:p-10">{children}</div>
+  );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { PhoneIcon, MailIcon, LocationIcon } from "public/icons";
+import TextareaAutosize from "react-textarea-autosize";
 
 function ContactSection() {
   return (
@@ -80,10 +81,12 @@ function ContactForm() {
         className="rounded border p-2 focus:border-transparent mb-12"
       />
       <label htmlFor="message">Your message:</label>
-      <textarea
+      <TextareaAutosize
         name="message"
         className="rounded border p-2 focus:border-transparent mb-12"
-      ></textarea>
+        minRows="3"
+        maxRows="9"
+      ></TextareaAutosize>
       <button type="submit" className="rounded p-2 bg-blue-600 text-white">
         Send
       </button>
