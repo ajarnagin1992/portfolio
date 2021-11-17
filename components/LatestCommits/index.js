@@ -67,26 +67,26 @@ function RepoCard(props) {
       </div>
     );
   return (
-    <div className="flex flex-col justify-between p-3 border border-black bg-gray-100 m-1 rounded space-y-1">
+    <div className="flex flex-col justify-between p-3 bg-gray-100 m-1 rounded space-y-1 h-44">
       <div className="flex flex-row justify-between items-baseline">
-        <h1 className="text-lg font-semibold underline w-2/3">{props.name}</h1>
+        <h1 className="text-lg font-semibold w-2/3">{props.name}</h1>
         <a
           href={props.url}
           target="_blank"
           rel="noreferrer"
-          className="flex flex-row items-center space-x-1 text-xs p-2 rounded text-white bg-gradient-to-bl from-blue-400 to-blue-600"
+          className="flex flex-row items-center space-x-1 text-xs p-2 rounded text-white bg-gradient-to-bl from-blue-400 to-blue-600 hover:from-blue-600 hover:to-blue-400"
         >
           <FaLink />
           <div>{" Repository"}</div>
         </a>
       </div>
       <p>{props.desc}</p>
-      <div className="flex flex-row space-x-3">
+      <div className="flex flex-row space-x-3 h-5">
         {props.topics.map((topic) => {
           return (
             <p
               key={topic}
-              className="text-xs font-extralight p-1 bg-blue-200 rounded-xl"
+              className="text-xs font-extralight px-2 py-0.5 bg-blue-200 rounded-xl"
             >
               {topic}
             </p>
