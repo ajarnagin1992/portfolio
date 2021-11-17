@@ -36,7 +36,7 @@ function Profile() {
   }
   return (
     <div>
-      <h1 className="text-5xl p-10">Latest Projects</h1>
+      <h1 className="text-5xl p-5 md:p-10">Latest Projects</h1>
       <div className="grid grid-cols-1 md:grid-cols-3">
         {data.map((repo) => {
           return (

@@ -20,7 +20,7 @@ function SkillSection() {
 function SkillSectionContainer(props) {
   return (
     <div className="flex flex-col pt-28">
-      <h1 className="text-5xl p-10">Skills</h1>
+      <h1 className="text-5xl p-5 md:p-10">Skills</h1>
       <div className="m-auto grid grid-flow-row grid-cols-3 md:grid-cols-6">
         {props.children}
       </div>
