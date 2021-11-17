@@ -19,29 +19,52 @@ function Profile() {
   );
 
   if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
-  else {
+  if (!data) {
     return (
       <div>
         <h1 className="text-5xl p-10">Latest Projects</h1>
         <div className="grid grid-cols-1 md:grid-cols-3">
-          {data.map((repo) => {
-            return (
-              <RepoCard
-                key={repo.id}
-                name={repo.name}
-                desc={repo.description}
-                url={repo.html_url}
-              ></RepoCard>
-            );
-          })}
+          <RepoCard loading="true"></RepoCard>
+          <RepoCard loading="true"></RepoCard>
+          <RepoCard loading="true"></RepoCard>
+          <RepoCard loading="true"></RepoCard>
+          <RepoCard loading="true"></RepoCard>
+          <RepoCard loading="true"></RepoCard>
         </div>
       </div>
     );
   }
+  return (
+    <div>
+      <h1 className="text-5xl p-10">Latest Projects</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3">
+        {data.map((repo) => {
+          return (
+            <RepoCard
+              key={repo.id}
+              name={repo.name}
+              desc={repo.description}
+              url={repo.html_url}
+            ></RepoCard>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 function RepoCard(props) {
+  if (props.loading)
+    return (
+      <div className="flex flex-col p-3 border border-black bg-gray-100 m-1 rounded space-y-1 animate-pulse">
+        <div className="flex flex-row justify-between items-baseline">
+          <h1 className="rounded bg-blue-400 h-6 w-3/5"></h1>
+          <div className="rounded bg-blue-400 w-1/4 h-6"></div>
+        </div>
+        <p className="rounded bg-blue-400 h-4 w-full"></p>
+        <p className="rounded bg-blue-400 h-4 w-full"></p>
+      </div>
+    );
   return (
     <div className="flex flex-col p-3 border border-black bg-gray-100 m-1 rounded space-y-1">
       <div className="flex flex-row justify-between items-baseline">
@@ -50,7 +73,7 @@ function RepoCard(props) {
           href={props.url}
           target="_blank"
           rel="noreferrer"
-          className="flex flex-row items-center space-x-1 text-xs p-3 rounded text-white bg-gradient-to-bl from-blue-400 to-blue-600"
+          className="flex flex-row items-center space-x-1 text-xs p-2 rounded text-white bg-gradient-to-bl from-blue-400 to-blue-600"
         >
           <FaLink />
           <div>{" Repository"}</div>
