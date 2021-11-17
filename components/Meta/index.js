@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export const Meta = ({ ...metadata }) => {
   const meta = {
-    title: "Andrew Jarnagin - Software Engineer",
+    title: "Andrew Jarnagin - Software Developer",
     description: "Andrew Jarnagin's development portfolio",
     ...metadata,
   };

@@ -3,7 +3,7 @@ import { PhoneIcon, MailIcon, LocationIcon } from "public/icons";
 
 function ContactSection() {
   return (
-    <div className="pt-10 md:pt-28 max-w-6xl mx-auto">
+    <div className="pt-10">
       <ContactTitle />
       <ContactBody>
         <div>
@@ -17,6 +17,7 @@ function ContactSection() {
             <InfoText icon={<LocationIcon />} info="Augusta, GA" />
           </InfoSection>
         </div>
+
         <ContactForm />
       </ContactBody>
     </div>
@@ -25,7 +26,7 @@ function ContactSection() {
 
 function ContactTitle(props) {
   return (
-    <div className=" text-5xl rounded-t-lg bg-blue-700 text-white p-8 pl-14">
+    <div className="block text-5xl rounded-t-lg bg-blue-700 text-white p-8 pl-14 overflow-visible">
       Contact Me
     </div>
   );
@@ -33,7 +34,11 @@ function ContactTitle(props) {
 
 function ContactBody(props) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 rounded-b-lg bg-blue-900 text-white p-20">
+    <div
+      className="
+      grid grid-cols-1 rounded-b-lg bg-blue-900 text-white p-10
+      md:p-20 md:grid-cols-2"
+    >
       {props.children}
     </div>
   );
@@ -41,7 +46,7 @@ function ContactBody(props) {
 
 function InfoSection(props) {
   return (
-    <div className="inline-flex flex-col py-6 px-10 space-y-3">
+    <div className="inline-flex flex-col py-6 px-5 space-y-3">
       <h1 className="">Contact Info:</h1>
       {props.children}
     </div>

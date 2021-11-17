@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import ContactSection from "components/ContactSection";
 import { Meta } from "components/Meta";
+import { PageMargins } from "layout/Layout";
 
 export default class contact extends Component {
   render() {
     return (
-      <div>
-        <Meta />
+      <PageMargins>
+        <Meta title="Andrew Jarnagin - Contact" />
         <ContactSection />
-      </div>
+      </PageMargins>
     );
   }
 }
