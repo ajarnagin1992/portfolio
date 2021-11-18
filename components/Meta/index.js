@@ -25,7 +25,7 @@ export const Meta = ({ ...metadata }) => {
       <meta name="twitter:site" content="@ajarnagin1992" />
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
-      <meta name="twitter:image" content={addBasePath(meta.image)} />
+      <meta name="twitter:image:src" content={addBasePath(meta.image)} />
     </Head>
   );
 };
