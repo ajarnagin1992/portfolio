@@ -5,7 +5,8 @@ import Head from "next/head";
 export const Meta = ({ ...metadata }) => {
   const meta = {
     title: "Andrew Jarnagin - Software Developer",
-    description: "Andrew Jarnagin's development portfolio",
+    description:
+      "Andrew Jarnagin's development portfolio created with Next.js and styled using Tailwindcss.",
     type: "memed",
     site_name: "Andrew Jarnagin - Software Developer",
     description: "Andrew Jarnagin's development portfolio",
