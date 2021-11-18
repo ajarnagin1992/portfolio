@@ -4,18 +4,21 @@ export const Meta = ({ ...metadata }) => {
   const meta = {
     title: "Andrew Jarnagin - Software Developer",
     description: "Andrew Jarnagin's development portfolio",
-    og: {
-      type: "memed",
-      site_name: "Andrew Jarnagin - Software Developer",
-      description: "Andrew Jarnagin's development portfolio",
-      image: "/avatar.jpg",
-    },
+    type: "memed",
+    site_name: "Andrew Jarnagin - Software Developer",
+    description: "Andrew Jarnagin's development portfolio",
+    image: "/avatar.jpg",
     ...metadata,
   };
   return (
     <Head>
       <title>{meta.title}</title>
-      <meta content={meta.description} name="description" />
+      <meta name="description" content={meta.description} />
+      <meta property="og:type" content={meta.type} />
+      <meta property="og:site_name" content={meta.site_name} />
+      <meta property="og:description" content={meta.description} />
+      <meta property="og:title" content={meta.title} />
+      <meta property="og:image" content={meta.image} />
     </Head>
   );
 };
