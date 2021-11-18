@@ -9,7 +9,7 @@ export const Meta = ({ ...metadata }) => {
     type: "memed",
     site_name: "Andrew Jarnagin - Software Developer",
     description: "Andrew Jarnagin's development portfolio",
-    image: "avatar.jpg",
+    image: "main-screen.png",
     ...metadata,
   };
   return (
