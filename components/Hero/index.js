@@ -3,16 +3,17 @@ import Link from "next/link";
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-row justify-center items-center p-10 bg-black text-white">
+    <div className="flex flex-row items-center justify-center bg-[#003366] text-white relative h-[500px] lg:h-[700px]">
       <div
         className="
-        w-full text-center space-y-10 
+        w-full text-center space-y-10 p-10 z-10
         lg:w-1/2 lg:text-left"
       >
-        <p className=" text-7xl">{"Hi, I'm Andrew!"}</p>
+        <h1 className=" text-6xl">{"Hi! I'm Andrew!"}</h1>
         <p className="text-3xl">
-          {"Full Stack Web-Developer / Software Engineer"}
+          - Full Stack Web-Developer <br /> - Software Engineer
         </p>
+        <p className="text-3xl">{}</p>
         <div>
           <Link href="https://drive.google.com/uc?export=download&id=19zKQZN3cyHFnqbUkQ-sSKbO9zoXrofFu">
             <a className="rounded p-3 bg-blue-600 hover:bg-blue-300">
@@ -21,8 +22,12 @@ export const HeroSection = () => {
           </Link>
         </div>
       </div>
-      <div className="hidden lg:block">
-        <img src={addBasePath("/avatar.jpg")} alt="Placeholder Image"></img>
+      <div className="lg:block absolute bottom-0 right-0">
+        <img
+          src={addBasePath("/avatar-removebg.jpg")}
+          alt="Placeholder Image"
+          className=" hidden lg:block lg:h-[700px]"
+        ></img>
       </div>
     </div>
   );

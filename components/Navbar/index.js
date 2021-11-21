@@ -71,7 +71,7 @@ function LinkSection(props) {
     <div className={props.className}>
       <Link href="/about">
         <a
-          className={`text-base p-3 ${
+          className={`text-base px-3 py-1 ${
             router.asPath === "/about" ? hoverstyle : ""
           }`}
         >
@@ -83,7 +83,7 @@ function LinkSection(props) {
             </Link> */}
       <Link href="/contact">
         <a
-          className={`text-base p-3 ${
+          className={`text-base px-3 py-1 ${
             router.asPath === "/contact" ? hoverstyle : ""
           }`}
         >

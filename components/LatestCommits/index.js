@@ -2,7 +2,6 @@ import React from "react";
 import useSWR from "swr";
 import { FaLink } from "react-icons/fa";
 import { BiExit } from "react-icons/bi";
-import ReactTooltip from "react-tooltip";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -50,7 +49,7 @@ function Profile() {
           <p className="text-s font-base w-16">{" View all"}</p>
         </a>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-1 md:grid-cols-3 ">
         {data.map((repo) => {
           return (
             <RepoCard
@@ -70,7 +69,7 @@ function Profile() {
 function RepoCard(props) {
   if (props.loading)
     return (
-      <div className="flex flex-col p-3 border border-black bg-gray-100 m-1 rounded space-y-1 animate-pulse">
+      <div className="flex flex-col p-3 border border-black bg-gray-100  rounded space-y-1 animate-pulse">
         <div className="flex flex-row justify-between items-baseline">
           <h1 className="rounded bg-blue-400 h-6 w-3/5"></h1>
           <div className="rounded bg-blue-400 w-1/4 h-6"></div>
@@ -80,15 +79,14 @@ function RepoCard(props) {
       </div>
     );
   return (
-    <div className="flex flex-col justify-between p-3 bg-gray-100 m-1 rounded space-y-1 h-36">
+    <div className="flex flex-col justify-between p-3 bg-gray-100 rounded space-y-1 min-h-36">
       <div className="flex flex-row justify-between items-baseline">
         <h1 className="text-lg font-semibold w-2/3">
           {props.name.length <= 18 ? (
             props.name
           ) : (
-            <div data-tip={props.name}>
+            <div data-tip={props.name} data-for="tooltip">
               {props.name.slice(0, 15)}...
-              <ReactTooltip></ReactTooltip>
             </div>
           )}
         </h1>
@@ -110,7 +108,13 @@ function RepoCard(props) {
               key={props.id + topic}
               className="text-xs font-extralight px-2 py-0.5 bg-blue-200 rounded-xl"
             >
-              {topic}
+              {topic.length <= 10 ? (
+                topic
+              ) : (
+                <div data-tip={topic} data-for="tooltip">
+                  {topic.slice(0, 7)}...
+                </div>
+              )}
             </p>
           );
         })}
