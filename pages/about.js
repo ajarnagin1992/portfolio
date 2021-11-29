@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Meta } from "components/Meta";
-import { PageMargins } from "layout/Layout";
+import { PageMargins } from "layout/layout";
 import SkillSection from "components/SkillSection";
 
 export default class about extends Component {

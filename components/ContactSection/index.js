@@ -28,7 +28,7 @@ function ContactSection() {
 function ContactTitle(props) {
   return (
     <div
-      className="block text-5xl rounded-t-lg bg-blue-700 text-white p-5 pl-7 
+      className="block text-5xl rounded-t-lg bg-tertiary-normal text-white p-5 pl-7 
       md:p-8 md:pl-14"
     >
       Contact Me
@@ -40,7 +40,7 @@ function ContactBody(props) {
   return (
     <div
       className="
-      grid grid-cols-1 rounded-b-lg bg-blue-900 text-white p-10
+      grid grid-cols-1 rounded-b-lg bg-tertiary-hover text-white p-10
       md:p-20 md:grid-cols-2"
     >
       {props.children}
@@ -87,7 +87,10 @@ function ContactForm() {
         minRows="3"
         maxRows="9"
       ></TextareaAutosize>
-      <button type="submit" className="rounded p-2 bg-blue-600 text-white">
+      <button
+        type="submit"
+        className="rounded p-3 bg-tertiary-normal hover:bg-tertiary-hover text-white"
+      >
         Send
       </button>
     </form>

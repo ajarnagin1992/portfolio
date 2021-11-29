@@ -30,7 +30,7 @@ function SkillSectionContainer(props) {
 
 function SkillCard({ icon, title }) {
   return (
-    <div className="p-3 flex flex-row items-center space-x-4 bg-gray-100 rounded">
+    <div className="p-3 flex flex-row items-center space-x-4 bg-background rounded">
       <div>{icon}</div>
       <div className="text-sm md:text-base">{title}</div>
     </div>

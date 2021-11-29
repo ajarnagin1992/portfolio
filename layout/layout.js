@@ -3,7 +3,7 @@ import { Navbar } from "components/Navbar";
 
 export const Layout = ({ children }) => {
   return (
-    <div className="bg-gray-200">
+    <div className="bg-background">
       <Navbar />
       <main className="">{children}</main>
       <Footer />
@@ -13,6 +13,6 @@ export const Layout = ({ children }) => {
 
 export function PageMargins({ children }) {
   return (
-    <div className="max-w-6xl mx-auto bg-white p-4 md:p-10">{children}</div>
+    <div className="max-w-6xl mx-auto bg-secondary p-4 md:p-10">{children}</div>
   );
 }
