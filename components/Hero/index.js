@@ -31,7 +31,7 @@ function TextSection(props) {
 
 function AvatarSection(props) {
   return (
-    <div className="hidden md:block absolute bottom-0 right-0 h-[700px]">
+    <div className="hidden lg:block absolute bottom-0 right-0 h-[700px]">
       <Image
         src={"/avatar-removebg.jpg"}
         alt="Avatar"

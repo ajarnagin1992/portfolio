@@ -5,7 +5,7 @@ import { HoverLink } from "components/Generic";
 import { RepoCard } from "./RepoCard";
 import { StyledHeader } from "components/Generic";
 
-function LatestCommits() {
+export function LatestProjects() {
   return (
     <div>
       <SectionHeader></SectionHeader>
@@ -75,5 +75,3 @@ function SkeletonCard(props) {
     </div>
   );
 }
-
-export default LatestCommits;

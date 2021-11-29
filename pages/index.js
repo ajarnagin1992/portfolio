@@ -1,4 +1,4 @@
-import LatestCommits from "components/LatestCommits";
+import { LatestProjects } from "components/LatestProjects";
 import { HeroSection } from "components/Hero";
 import { Meta } from "components/Meta";
 import { PageMargins } from "layout/layout";
@@ -11,7 +11,7 @@ export default function Home() {
       <Meta />
       <HeroSection />
       <PageMargins>
-        <LatestCommits />
+        <LatestProjects />
         <SkillSection />
         <ContactSection />
       </PageMargins>
