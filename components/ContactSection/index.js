@@ -13,9 +13,13 @@ function ContactSection() {
             {"Fill out the contact form and I'll get back to you ASAP!"}
           </h2>
           <InfoSection>
-            <InfoText icon={<PhoneIcon />} info="(478)-331-1569" />
-            <InfoText icon={<MailIcon />} info="ajarnagin1992@gmail.com" />
-            <InfoText icon={<LocationIcon />} info="Augusta, GA" />
+            <a href="tel:478-331-1569">
+              <InfoText icon={<PhoneIcon />} info="(478)-331-1569" />
+            </a>
+            <a href="mailto:ajarnagin1992@gmail.com">
+              <InfoText icon={<MailIcon />} info="ajarnagin1992@gmail.com" />
+            </a>
+            <InfoText icon={<LocationIcon />} info="Atlanta, GA" />
           </InfoSection>
         </div>
 
@@ -28,7 +32,7 @@ function ContactSection() {
 function ContactTitle(props) {
   return (
     <div
-      className="block text-5xl rounded-t-lg bg-tertiary-normal text-white p-5 pl-7 
+      className="block text-5xl rounded-t-lg bg-primary text-texttertiary p-5 pl-7 
       md:p-8 md:pl-14"
     >
       Contact Me
@@ -40,7 +44,7 @@ function ContactBody(props) {
   return (
     <div
       className="
-      grid grid-cols-1 rounded-b-lg bg-tertiary-hover text-white p-10
+      grid grid-cols-1 rounded-b-lg bg-primaryaccent text-texttertiary p-10
       md:p-20 md:grid-cols-2"
     >
       {props.children}
@@ -69,7 +73,7 @@ function InfoText(props) {
 function ContactForm() {
   return (
     <form
-      className="flex flex-col bg-white text-black p-12 rounded-xl"
+      className="flex flex-col bg-secondary text-black p-12 rounded-xl"
       action="https://formspree.io/f/xleayqwr"
       method="POST"
       encType="multipart/form-data"

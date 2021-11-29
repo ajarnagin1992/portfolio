@@ -65,13 +65,13 @@ function NavContainer(props) {
 
 function LinkSection(props) {
   const router = useRouter();
-  const hoverstyle = "bg-tertiary-normal rounded";
+  const hoverstyle = "bg-tertiary-normal text-texttertiary rounded ";
 
   return (
     <div className={props.className}>
       <Link href="/about">
         <a
-          className={`text-base px-3 py-1 ${
+          className={`text-base p-3 ${
             router.asPath === "/about" ? hoverstyle : ""
           }`}
         >
@@ -83,7 +83,7 @@ function LinkSection(props) {
             </Link> */}
       <Link href="/contact">
         <a
-          className={`text-base px-3 py-1 ${
+          className={`text-base p-3 ${
             router.asPath === "/contact" ? hoverstyle : ""
           }`}
         >

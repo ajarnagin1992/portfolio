@@ -10,12 +10,13 @@ module.exports = {
     extend: {
       colors: {
         primary: "#242333",
+        primaryaccent: "#3b3954",
         secondary: "#FFFFFF",
         tertiary: { normal: "#01B0D3", hover: "#0187a2", accent: "#5de3fe" },
         background: "#e5e7eb",
-        textprimary: "#DBDCCC",
+        textprimary: "#FFFFFF",
         textsecondary: "#000000",
-        texttertiary: "#FFFFFF",
+        texttertiary: "#FAF9F6",
       },
       keyframes: {
         "fade-in-down": {
@@ -29,7 +30,9 @@ module.exports = {
           },
         },
       },
-      animation: { "fade-in-down": "fade-in-down 1s ease-out" },
+      animation: {
+        "fade-in-down": "fade-in-down 1s ease-out",
+      },
     },
   },
   variants: {

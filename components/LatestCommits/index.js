@@ -20,6 +20,8 @@ function SectionHeader(props) {
       <StyledHeader>Latest Projects</StyledHeader>
       <HoverLink
         href="https://github.com/ajarnagin1992?tab=repositories"
+        target="_blank"
+        rel="noreferrer"
         icon={<BiExit />}
         label="View all"
       ></HoverLink>
@@ -32,7 +34,7 @@ function RepoGrid(props) {
   if (isError) return <div>failed to load</div>;
   if (isLoading) return <SkeletonGrid />;
   return (
-    <div className="grid grid-cols-1 gap-1 md:grid-cols-3 ">
+    <div className="m-auto grid grid-flow-row grid-cols-1 gap-1 md:grid-cols-3 ">
       {repodata.map((repo) => {
         return (
           <RepoCard

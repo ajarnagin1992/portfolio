@@ -8,7 +8,7 @@ export function RepoCard(props) {
       href={props.url}
       target="_blank"
       rel="noreferrer"
-      className="flex flex-col justify-between p-3 bg-background rounded space-y-1 h-48"
+      className="flex flex-col justify-between p-3 bg-background rounded space-y-1 h-40"
     >
       <div className="flex flex-row justify-between items-baseline">
         <h1 className="text-lg font-semibold w-2/3">

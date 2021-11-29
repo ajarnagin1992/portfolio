@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-row items-center justify-center bg-primary text-textprimary relative h-[500px] md:h-[700px]">
+    <div className="flex flex-row items-center justify-center bg-primaryaccent text-textprimary relative h-[500px] md:h-[700px]">
       <TextSection></TextSection>
       <AvatarSection></AvatarSection>
     </div>
