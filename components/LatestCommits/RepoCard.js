@@ -8,15 +8,15 @@ export function RepoCard(props) {
       href={props.url}
       target="_blank"
       rel="noreferrer"
-      className="flex flex-col justify-between p-3 bg-background rounded space-y-1 min-h-36"
+      className="flex flex-col justify-between p-3 bg-background rounded space-y-1 h-48"
     >
       <div className="flex flex-row justify-between items-baseline">
         <h1 className="text-lg font-semibold w-2/3">
-          {props.name.length <= 28 ? (
+          {props.name.length <= 20 ? (
             props.name
           ) : (
             <div data-tip={props.name} data-for="tooltip">
-              {props.name.slice(0, 25)}...
+              {props.name.slice(0, 17)}...
             </div>
           )}
         </h1>

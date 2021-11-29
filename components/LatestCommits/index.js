@@ -3,6 +3,7 @@ import { BiExit } from "react-icons/bi";
 import { GetRepos } from "../../lib/GetRepos";
 import { HoverLink } from "components/Generic";
 import { RepoCard } from "./RepoCard";
+import { StyledHeader } from "components/Generic";
 
 function LatestCommits() {
   return (
@@ -16,7 +17,7 @@ function LatestCommits() {
 function SectionHeader(props) {
   return (
     <div className="flex flex-row items-center justify-between">
-      <h1 className="text-5xl p-10">Latest Projects</h1>
+      <StyledHeader>Latest Projects</StyledHeader>
       <HoverLink
         href="https://github.com/ajarnagin1992?tab=repositories"
         icon={<BiExit />}

@@ -35,7 +35,7 @@ function SocialLinks(props) {
         href={"https://www.linkedin.com/in/ajarnagin1992/"}
         target="_blank"
         rel="noreferrer"
-        className="text-base font-normal text-white"
+        className="text-base font-normal text-textprimary"
       >
         <FaLinkedin className="h-6 w-6 md:h-8 md:w-8" />
       </a>
@@ -43,7 +43,7 @@ function SocialLinks(props) {
         href={"https://github.com/ajarnagin1992"}
         target="_blank"
         rel="noreferrer"
-        className="text-base font-normal text-white dark:text-gray-300"
+        className="text-base font-normal text-textprimary"
       >
         <FaGithub className="h-6 w-6 md:h-8 md:w-8" />
       </a>
@@ -55,7 +55,7 @@ function NavContainer(props) {
   return (
     <nav
       className={`
-      bg-primary text-white max-w-full px-4 py-2 
+      bg-primary text-textprimary max-w-full px-4 py-2 
       md:px-10 md:py-4 ${props.className}`}
     >
       {props.children}

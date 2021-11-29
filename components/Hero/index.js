@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-row items-center justify-center bg-primary text-white relative h-[500px] md:h-[700px]">
+    <div className="flex flex-row items-center justify-center bg-primary text-textprimary relative h-[500px] md:h-[700px]">
       <TextSection></TextSection>
       <AvatarSection></AvatarSection>
     </div>
@@ -14,10 +14,10 @@ function TextSection(props) {
   return (
     <div
       className="
-        text-center space-y-10 p-10 z-10
+        animate-fade-in-down text-center space-y-10 p-10 z-10
         lg:w-1/2 lg:text-left"
     >
-      <h1 className=" text-6xl">{"Hi! I'm Andrew!"}</h1>
+      <h1 className="text-6xl">{"Hi! I'm Andrew!"}</h1>
       <p className="text-3xl">
         - Full Stack Web-Developer <br /> - Software Engineer
       </p>
