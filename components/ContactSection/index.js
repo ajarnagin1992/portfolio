@@ -13,10 +13,10 @@ function ContactSection() {
             {"Fill out the contact form and I'll get back to you ASAP!"}
           </h2>
           <InfoSection>
-            <a href="tel:478-331-1569">
+            <a href="tel:478-331-1569" className="underline">
               <InfoText icon={<PhoneIcon />} info="(478)-331-1569" />
             </a>
-            <a href="mailto:ajarnagin1992@gmail.com">
+            <a href="mailto:ajarnagin1992@gmail.com" className="underline">
               <InfoText icon={<MailIcon />} info="ajarnagin1992@gmail.com" />
             </a>
             <InfoText icon={<LocationIcon />} info="Atlanta, GA" />
