@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-row items-center justify-center bg-primaryaccent text-textprimary relative h-[500px] md:h-[700px]">
+    <div className="flex items-center p-16 bg-primaryaccent text-textprimary relative h-[500px]">
       <TextSection></TextSection>
       <AvatarSection></AvatarSection>
     </div>
@@ -14,8 +14,7 @@ function TextSection(props) {
   return (
     <div
       className="
-        animate-fade-in-down text-center space-y-10 p-10 z-10
-        lg:w-1/2 lg:text-left"
+        flex flex-col animate-fade-in-down space-y-10 p-10 z-10 text-left"
     >
       <h1 className="text-6xl">{"Hi! I'm Andrew!"}</h1>
       <p className="text-3xl">
@@ -31,12 +30,13 @@ function TextSection(props) {
 
 function AvatarSection(props) {
   return (
-    <div className="hidden lg:block absolute bottom-0 right-0 h-[700px]">
+    <div className="hidden md:block absolute bottom-0 right-0 h-[500px]">
       <Image
         src={"/avatar-removebg.jpg"}
         alt="Avatar"
-        height="700px"
-        width="700px"
+        height="500px"
+        width="500px"
+        className=""
       />
     </div>
   );

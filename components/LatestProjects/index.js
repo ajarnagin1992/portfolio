@@ -24,7 +24,7 @@ function SectionHeader(props) {
         rel="noreferrer"
         icon={<BiExit />}
         label="View all"
-      ></HoverLink>
+      />
     </div>
   );
 }
