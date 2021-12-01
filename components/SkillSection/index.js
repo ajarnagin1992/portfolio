@@ -1,3 +1,4 @@
+import { StyledHeader } from "components/Generic";
 import React from "react";
 import { skills } from "./skills";
 
@@ -20,7 +21,7 @@ function SkillSection() {
 function SkillSectionContainer(props) {
   return (
     <div className="flex flex-col">
-      <h1 className="text-5xl p-5 md:p-10">Skills</h1>
+      <StyledHeader>Skills</StyledHeader>
       <div className="m-auto grid grid-flow-row grid-cols-3 md:grid-cols-6 gap-1">
         {props.children}
       </div>
@@ -30,7 +31,7 @@ function SkillSectionContainer(props) {
 
 function SkillCard({ icon, title }) {
   return (
-    <div className="p-3 flex flex-row items-center space-x-4 bg-gray-100 rounded">
+    <div className="p-3 flex flex-row items-center space-x-4 bg-background rounded">
       <div>{icon}</div>
       <div className="text-sm md:text-base">{title}</div>
     </div>

@@ -1,5 +1,19 @@
 import React from "react";
+import Link from "next/link";
 
-export function HeaderLg(props) {
-  return <h1 className="text-5xl p-5 md:p-10">{props.text}</h1>;
+export function StyledHeader(props) {
+  return <h1 className="text-5xl py-5 md:py-10">{props.children}</h1>;
+}
+
+export function HoverLink(props) {
+  return (
+    <Link href={props.href} target={props.target} rel={props.rel}>
+      <a className="flex flex-row w-max rounded p-3 text-texttertiary bg-tertiary-normal hover:bg-tertiary-hover">
+        <p className="inline-flex items-center space-x-1 w-max">
+          {props.icon}
+          <span>{props.label}</span>
+        </p>
+      </a>
+    </Link>
+  );
 }
