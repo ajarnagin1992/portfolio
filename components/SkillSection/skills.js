@@ -1,5 +1,5 @@
 import React from "react";
-import { FaJs, FaReact, FaAngular, FaPython, FaNode } from "react-icons/fa";
+import { FaJs, FaReact, FaAngular, FaPython, FaNodeJs } from "react-icons/fa";
 import {
   SiElm,
   SiHaskell,
@@ -74,7 +74,7 @@ export const skills = [
   {
     title: "Node",
     key: "node",
-    Component: FaNode,
+    Component: FaNodeJs,
     Description: "",
   },
   {
