@@ -1,9 +1,8 @@
 import React from "react";
 import { BiExit } from "react-icons/bi";
 import { GetRepos } from "../../lib/GetRepos";
-import { HoverLink } from "components/Generic";
+import { HoverLink, StyledHeader } from "../Generic";
 import { RepoCard } from "./RepoCard";
-import { StyledHeader } from "components/Generic";
 
 export function LatestProjects() {
   return (
@@ -31,8 +30,16 @@ function SectionHeader(props) {
 
 function RepoGrid(props) {
   const { repodata, isLoading, isError } = GetRepos();
-  if (isError) return <div>failed to load</div>;
-  if (isLoading) return <SkeletonGrid />;
+  if (isError) {
+    return (
+      <div>
+        <p>failed to load</p>
+      </div>
+    );
+  }
+  if (isLoading) {
+    return <SkeletonGrid />;
+  }
   return (
     <div className="m-auto grid grid-flow-row grid-cols-1 gap-1 md:grid-cols-3 ">
       {repodata.map((repo) => {

@@ -1,4 +1,4 @@
-import { HoverLink } from "components/Generic";
+import { HoverLink } from "../Generic";
 import React from "react";
 import { FaLink } from "react-icons/fa";
 
