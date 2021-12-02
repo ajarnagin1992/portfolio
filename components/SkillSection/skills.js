@@ -5,10 +5,9 @@ import {
   SiHaskell,
   SiMicrosoftazure,
   SiApache,
-  SiMysql,
   SiNextdotjs,
 } from "react-icons/si";
-import { DiDotnet } from "react-icons/di";
+import { DiDotnet, DiMysql } from "react-icons/di";
 
 export const skills = [
   {
@@ -68,7 +67,7 @@ export const skills = [
   {
     title: "MySQL",
     key: "mysql",
-    Component: SiMysql,
+    Component: DiMysql,
     Description: "",
   },
   {
