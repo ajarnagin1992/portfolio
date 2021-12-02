@@ -1,7 +1,6 @@
 import React from "react";
 import { FaJs, FaReact, FaAngular, FaPython, FaNode } from "react-icons/fa";
 import {
-  SiDotnet,
   SiElm,
   SiHaskell,
   SiMicrosoftazure,
@@ -9,6 +8,7 @@ import {
   SiMysql,
   SiNextdotjs,
 } from "react-icons/si";
+import { DiDotnet } from "react-icons/di";
 
 export const skills = [
   {
@@ -32,7 +32,7 @@ export const skills = [
   {
     title: ".NET",
     key: "net",
-    Component: SiDotnet,
+    Component: DiDotnet,
     Description: "",
   },
   {
