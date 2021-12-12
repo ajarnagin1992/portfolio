@@ -32,9 +32,9 @@ export function RepoCard(props) {
               {topic.length <= 10 ? (
                 topic
               ) : (
-                <div data-tip={topic} data-for="tooltip">
+                <span data-tip={topic} data-for="tooltip">
                   {topic.slice(0, 7)}...
-                </div>
+                </span>
               )}
             </p>
           );

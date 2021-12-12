@@ -4,11 +4,15 @@ import { GetRepos } from "../../lib/GetRepos";
 import { HoverLink, StyledHeader } from "../Generic";
 import { RepoCard } from "./RepoCard";
 
-export function LatestProjects() {
+export function LatestProjects({ repodata, isLoading, isError }) {
   return (
     <div>
       <SectionHeader></SectionHeader>
-      <RepoGrid></RepoGrid>
+      <RepoGrid
+        repodata={repodata}
+        isLoading={isLoading}
+        isError={isError}
+      ></RepoGrid>
     </div>
   );
 }
@@ -28,8 +32,7 @@ function SectionHeader(props) {
   );
 }
 
-function RepoGrid(props) {
-  const { repodata, isLoading, isError } = GetRepos();
+export function RepoGrid({ repodata, isLoading, isError }) {
   if (isError) {
     return (
       <div>
@@ -40,8 +43,9 @@ function RepoGrid(props) {
   if (isLoading) {
     return <SkeletonGrid />;
   }
+
   return (
-    <div className="m-auto grid grid-flow-row grid-cols-1 gap-1 md:grid-cols-3 ">
+    <div className="m-auto grid grid-flow-row grid-cols-1 gap-1 md:grid-cols-3">
       {repodata.map((repo) => {
         return (
           <RepoCard
@@ -59,7 +63,7 @@ function RepoGrid(props) {
 
 function SkeletonGrid(props) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3">
+    <div className="m-auto grid grid-flow-row grid-cols-1 gap-1 md:grid-cols-3">
       <SkeletonCard></SkeletonCard>
       <SkeletonCard></SkeletonCard>
       <SkeletonCard></SkeletonCard>
@@ -72,7 +76,7 @@ function SkeletonGrid(props) {
 
 function SkeletonCard(props) {
   return (
-    <div className="flex flex-col p-3 bg-background  rounded space-y-1 animate-pulse">
+    <div className="flex flex-col justify-between p-3 bg-background rounded space-y-1 h-40 animate-pulse">
       <div className="flex flex-row justify-between items-baseline">
         <h1 className="rounded bg-tertiary-normal h-6 w-3/5"></h1>
         <div className="rounded bg-tertiary-normal w-1/4 h-6"></div>

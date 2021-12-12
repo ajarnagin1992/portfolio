@@ -96,24 +96,20 @@ function LinkSection(props) {
 
 function AvatarSection(props) {
   return (
-    <div className="flex flex-row space-x-4">
-      <Link href="/">
-        <a className="h-12 w-12">
-          <Image
-            src="/avatar.jpg"
-            alt="AvatarIcon"
-            height="48px"
-            width="48px"
-            className="rounded-full"
-          />
-        </a>
-      </Link>
-      <Link href="/">
-        <a>
+    <Link href="/">
+      <a className="flex flex-row space-x-4">
+        <Image
+          src="/avatar.jpg"
+          alt="AvatarIcon"
+          height="48px"
+          width="48px"
+          className="rounded-full"
+        />
+        <div className="flex flex-col">
           <p className="font-semibold">Andrew Jarnagin</p>
           <p className="font-light">Software Developer</p>
-        </a>
-      </Link>
-    </div>
+        </div>
+      </a>
+    </Link>
   );
 }
