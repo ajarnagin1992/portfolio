@@ -22,7 +22,7 @@ function SkillSectionContainer(props) {
   return (
     <div className="flex flex-col">
       <StyledHeader>Skills</StyledHeader>
-      <div className="m-auto grid grid-flow-row grid-cols-2 md:grid-cols-6 gap-1">
+      <div className="m-auto grid grid-flow-row grid-cols-2 md:grid-cols-5 gap-1">
         {props.children}
       </div>
     </div>
@@ -31,7 +31,7 @@ function SkillSectionContainer(props) {
 
 function SkillCard({ icon, title }) {
   return (
-    <div className="p-3 flex flex-row items-center space-x-4 bg-background rounded">
+    <div className="p-3 flex flex-row items-center justify-center space-x-4 bg-background rounded">
       <div>{icon}</div>
       <div className="text-sm md:text-base">{title}</div>
     </div>

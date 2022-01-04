@@ -5,11 +5,21 @@ export const Footer = () => {
         <p>{"© 2021 Andrew Jarnagin. All rights reserved."}</p>
         <p>
           {"Built with "}
-          <a href="https://nextjs.org/" className="text-tertiary-normal">
+          <a
+            href="https://nextjs.org/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-tertiary-normal"
+          >
             Next.js
           </a>
           {" and "}
-          <a href="https://tailwindcss.com/" className="text-tertiary-normal">
+          <a
+            href="https://tailwindcss.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-tertiary-normal"
+          >
             Tailwindcss
           </a>
         </p>
