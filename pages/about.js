@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Meta } from "components/Meta";
+import { Meta } from "components/Meta/Meta";
 import { PageMargins } from "layout/layout";
-import SkillSection from "components/SkillSection";
-import { StyledHeader } from "components/Generic";
+import SkillSection from "components/SkillSection/SkillSection";
+import { StyledHeader } from "components/StyledHeader";
 
 export default class about extends Component {
   render() {

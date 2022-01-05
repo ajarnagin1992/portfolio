@@ -1,7 +1,8 @@
 import React from "react";
 import { BiExit } from "react-icons/bi";
 import { GetRepos } from "../../lib/GetRepos";
-import { HoverLink, StyledHeader } from "../Generic";
+import { HoverLink } from "../Generic/HoverLink";
+import { StyledHeader } from "../Generic/StyledHeader";
 import { RepoCard } from "./RepoCard";
 
 export function LatestProjects({ repodata, isLoading, isError }) {

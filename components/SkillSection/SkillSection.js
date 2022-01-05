@@ -1,4 +1,4 @@
-import { StyledHeader } from "components/Generic";
+import { StyledHeader } from "../Generic/StyledHeader";
 import React from "react";
 import { skills } from "./skills";
 

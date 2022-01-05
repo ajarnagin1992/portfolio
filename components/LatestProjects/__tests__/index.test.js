@@ -3,7 +3,7 @@
  */
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { LatestProjects, RepoGrid } from "..";
+import { LatestProjects, RepoGrid } from "../LatestProjects";
 import { returnMockData } from "../../../lib/__mocks__/GetRepos";
 
 describe("LatestProjects", () => {

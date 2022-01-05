@@ -1,4 +1,4 @@
-import { HoverLink } from "components/Generic";
+import { HoverLink } from "components/Generic/HoverLink";
 import Image from "next/image";
 
 export const HeroSection = () => {
